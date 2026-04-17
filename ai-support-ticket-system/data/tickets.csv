@@ -1,0 +1,21 @@
+ticket_text,category,urgency
+I cannot log into my student account,Account Access,High
+My password reset link is not working,Account Access,High
+Brightspace is not loading my course content,LMS / Brightspace,High
+I cannot submit my assignment on D2L,LMS / Brightspace,High
+Zoom audio is not working during lectures,Zoom / Virtual Class,Medium
+My camera is not detected in Zoom,Zoom / Virtual Class,Medium
+I need help installing software on my laptop,Software Installation,Low
+My laptop is running very slow,Hardware / Device,Medium
+I cannot connect to the campus Wi-Fi,Network / Wi-Fi,High
+My email is not syncing on my phone,Email,Medium
+I am not receiving emails from my professor,Email,High
+My laptop screen is flickering,Hardware / Device,High
+The internet connection keeps dropping,Network / Wi-Fi,Medium
+I need access to a shared drive,Account Access,Medium
+D2L quizzes are not opening,LMS / Brightspace,High
+Zoom keeps disconnecting during class,Zoom / Virtual Class,High
+I want to install a new application,Software Installation,Low
+My keyboard is not working,Hardware / Device,High
+Wi-Fi is very slow in my dorm,Network / Wi-Fi,Medium
+How do I install Zoom on my laptop?,Software Installation,Low
