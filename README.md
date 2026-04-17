@@ -1,5 +1,5 @@
 # Portfolio
-My personal p# AI Support Ticket System
+My personal AI Support Ticket System
 
 This project is a machine learning-based web application that classifies IT support tickets by category and urgency.
 
@@ -57,4 +57,3 @@ This project uses a small dataset and is meant for demonstration purposes.
 ## Author
 
 Enxhi Merkaj
-ortfolio showcasing projects
