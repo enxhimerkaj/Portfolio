@@ -19,8 +19,11 @@ st.set_page_config(
 # =========================================================
 # CONSTANTS
 # =========================================================
-DB_PATH = "data/support_tickets.db"
-TRAINING_DATA_PATH = "data/tickets.csv"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_DIR = os.path.join(BASE_DIR, "data")
+
+DB_PATH = os.path.join(DATA_DIR, "support_tickets.db")
+TRAINING_DATA_PATH = os.path.join(DATA_DIR, "tickets.csv")
 DEFAULT_ADMIN_PASSWORD = "admin123"  # change this later if you want
 
 SUPPORT_STAFF_OPTIONS = [
@@ -107,7 +110,7 @@ def get_connection():
     return sqlite3.connect(DB_PATH, check_same_thread=False)
 
 def init_db():
-    os.makedirs("data", exist_ok=True)
+    os.makedirs(DATA_DIR, exist_ok=True)
     conn = get_connection()
     cursor = conn.cursor()
 
