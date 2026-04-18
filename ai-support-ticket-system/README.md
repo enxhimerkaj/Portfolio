@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 My personal AI Support Ticket System
-=======
-# AI Support Ticket System
->>>>>>> 1bf11db (Final version: upgraded AI support ticket system with ML, dashboard, and database)
 
 A full-stack support ticket application built with Python and Streamlit that uses machine learning to classify user issues and helps support staff manage tickets through a dashboard.
 
@@ -192,3 +188,4 @@ It demonstrates how AI can be integrated into everyday workflows to improve effi
 ## Author
 
 Enxhi Merkaj
+git
