@@ -1,58 +1,194 @@
+<<<<<<< HEAD
 My personal AI Support Ticket System
+=======
+# AI Support Ticket System
+>>>>>>> 1bf11db (Final version: upgraded AI support ticket system with ML, dashboard, and database)
 
-This project is a machine learning-based web application that classifies IT support tickets by category and urgency.
+A full-stack support ticket application built with Python and Streamlit that uses machine learning to classify user issues and helps support staff manage tickets through a dashboard.
 
-## Overview
+---
 
-The goal of this project is to simulate a real-world support system where incoming tickets are automatically analyzed and categorized. The model predicts both the type of issue and how urgent it is.
+## Project Overview
 
-## Features
+This project simulates a real-world IT help desk system.
 
-* Classifies support tickets into categories (Account Access, LMS, Zoom, etc.)
-* Predicts urgency level (Low, Medium, High)
-* Simple web interface using Streamlit
-* Real-time predictions based on user input
+Users (students) can submit support requests with their contact information and issue description. The system automatically analyzes the request using machine learning to predict both the **category** and **urgency** of the issue.
 
-## Technologies Used
+All tickets are stored in a database and can be reviewed, managed, and updated through a dedicated admin dashboard.
 
-* Python
-* Pandas
-* Scikit-learn
-* TF-IDF Vectorization
-* Logistic Regression
-* Streamlit
+---
 
-## How It Works
+## Key Features
 
-1. The user enters a support ticket
-2. The text is converted into numerical features using TF-IDF
-3. Two models predict:
+### Student Portal
 
-   * Category
-   * Urgency
-4. The results are displayed in the web interface
+* Submit support tickets with:
 
-## Running the Project
+  * Full name
+  * School ID
+  * Email
+  * Issue description
+* Automatic AI predictions:
+
+  * Issue category
+  * Urgency level (Low / Medium / High)
+* Confidence scores for predictions
+* Unique ticket ID generation
+* Input validation to ensure clean and usable data
+
+---
+
+### Tech Support Dashboard
+
+* Password-protected admin access
+* View all submitted tickets
+* Search tickets by:
+
+  * Name
+  * Email
+  * School ID
+  * Ticket content
+* Filter tickets by:
+
+  * Urgency
+  * Status
+  * Category
+  * Assigned support team
+* Update ticket details:
+
+  * Status (Open, In Progress, Resolved)
+  * Assigned support staff
+  * Internal notes
+* Delete tickets if needed
+* Highlight high-priority tickets for faster response
+
+---
+
+### Analytics & Insights
+
+* Visual breakdown of:
+
+  * Tickets by category
+  * Tickets by urgency
+  * Ticket status distribution
+  * Assigned support workload
+* Built-in charts for quick decision-making
+
+---
+
+## Machine Learning Approach
+
+The application uses a simple but effective NLP pipeline:
+
+* **TF-IDF Vectorization**
+
+  * Converts text input into numerical features
+
+* **Logistic Regression Models**
+
+  * One model predicts the ticket category
+  * Another model predicts urgency level
+
+* **Confidence Scores**
+
+  * Shows how certain the model is about each prediction
+
+The model is trained using a labeled dataset (`tickets.csv`) containing example support requests.
+
+---
+
+## Tech Stack
+
+* **Python**
+* **Streamlit** – UI and app framework
+* **Pandas** – data manipulation
+* **SQLite** – database storage
+* **Scikit-learn** – machine learning (TF-IDF + Logistic Regression)
+
+---
+
+## Project Structure
+
+```
+ai-support-ticket-system/
+│
+├── app/
+│   └── app.py                # main application
+│
+├── data/
+│   ├── tickets.csv           # training dataset
+│   └── support_tickets.db    # SQLite database (auto-created)
+│
+├── train_model.py            # optional training script
+├── README.md
+```
+
+---
+
+## How to Run the Project
+
+1. Clone the repository:
+
+```bash
+git clone <your-repo-link>
+cd ai-support-ticket-system
+```
+
+2. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
+```
+
+3. Run the application:
+
+```bash
 streamlit run app/app.py
 ```
 
-## Example
+---
 
-Input:
-"I forgot my D2L password"
+## Demo Access
 
-Output:
+* Student Portal → available by default
+* Tech Support Portal → requires password
 
-* Category: LMS / Brightspace
-* Urgency: High
+**Admin Password:**
 
-## Notes
+```
+admin123
+```
 
-This project uses a small dataset and is meant for demonstration purposes.
+---
 
+## What This Project Demonstrates
+
+* Building an end-to-end application using Python
+* Integrating machine learning into a real workflow
+* Designing user input forms and dashboards
+* Working with a relational database (SQLite)
+* Implementing filtering, search, and data visualization
+* Structuring a project for real-world use cases
+
+---
+
+## Future Improvements
+
+* Real email notifications (SMTP / SendGrid)
+* Multi-user authentication (separate staff accounts)
+* Improved ML model with larger dataset
+* UI/UX enhancements
+* Deployment (Streamlit Cloud or AWS)
+
+---
+
+## Summary
+
+This project goes beyond a simple machine learning demo. It combines data processing, model training, database management, and an interactive interface to simulate a realistic support ticket system.
+
+It demonstrates how AI can be integrated into everyday workflows to improve efficiency and decision-making.
+
+---
 ## Author
 
 Enxhi Merkaj
